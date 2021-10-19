@@ -1,9 +1,13 @@
-function Navbar() {
+import { Container,Nav,Navbar } from 'react-bootstrap';
+import './App.css';
+
+
+function Navs() {
 	return (
 		<>
       <Navbar bg="dark" variant="dark">
     <Container>
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Navbar.Brand href="#home" className="brand">FoodFlix</Navbar.Brand>
     <Nav className="me-auto">
       <Nav.Link href="#home">Home</Nav.Link>
       <Nav.Link href="#features">Features</Nav.Link>
@@ -11,12 +15,8 @@ function Navbar() {
     </Nav>
     </Container>
   </Navbar>
-
-
-			<TestClass test_prop={'test text'} />
-			<FunctionalComponent test_num={10} test_string="tester" />
 		</>
 	);
 }
 
-export default Navbar;
+export default Navs;
