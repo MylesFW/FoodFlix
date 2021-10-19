@@ -10,4 +10,5 @@
 
 1. cd food_flix
 2. npm run start
-3.
+3. cd..
+4. add .gitignore
