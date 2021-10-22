@@ -8,7 +8,6 @@ function App() {
 	return (
 		<>
 			<Navs />
-			console.log(process.env.REACT_APP_FOODFLIX_API_KEY)
 			<Body />
 			<Footer />
 		</>
