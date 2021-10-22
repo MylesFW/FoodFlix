@@ -11,7 +11,8 @@ const Movie = (props) => {
 	useEffect(() => {
 		axios
 			.get(
-				'https://api.themoviedb.org/3/search/movie?api_key=00c8e5cb703823bba820eed2451dab07&query=Jack+Reacher'
+        'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key='+
+				process.env.REACT_APP_FOODFLIX_API_KEY+'&page=1'
 			)
 			.then((res) => {
 				setMovie(res.data.results);
