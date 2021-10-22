@@ -26,7 +26,7 @@ const Movie = props => {
       <div>
         
       {movie.length > 0 && movie.map((movie, index)=>{
-          return (<div key={index}>{movie.id}</div>)
+          return (<div key={index}>{movie.title}</div>)
       })}
       
   </div>
