@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Col,Container,Row } from 'react-bootstrap';
 
 const Movie = (props) => {
 	//Note the second argument is an empty array. We are only
@@ -25,15 +26,32 @@ const Movie = (props) => {
 			});
 	}, []);
 
+  if (movie === null) {
+    return <img src ="https://cdn.dribbble.com/users/576558/screenshots/3801681/media/f2148dc5132ea854540a3c693bc51d5d.png?compress=1&resize=800x600"></img>
+  }
+
 	return (
-		<div>
-			<h1>movie title</h1>
-			{movie.length > 0 &&
+		<>
+			
+      <Container>
+    <h1>Movie Title</h1>
+    <Row>
+		
+  
+      <Col>	{movie.length > 0 &&
 				movie.map((movie, index) => {
 					return <div key={index}>{movie.title}</div>;
-				})}
-			<h1>movie details</h1>
-		</div>
+				})} </Col>
+      
+    </Row>
+    <Row>
+      <Col>1 of 3</Col>
+      <Col>2 of 3</Col>
+      <Col>3 of 3</Col>
+    </Row>
+  </Container>
+
+		</>
 	);
 };
 

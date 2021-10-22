@@ -9,8 +9,11 @@ function App() {
 	return (
 		<>
 			<Navs />
+<<<<<<< HEAD
 			<HomeCarousel />
 			console.log(jsonify(process.env.REACT_APP_FOODFLIX_API_KEY))
+=======
+>>>>>>> 0bfe0a0eca9ec4a0366d1ed77ec41ed1700a7b6c
 			<Body />
 			<Footer />
 		</>
