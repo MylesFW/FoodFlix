@@ -11,8 +11,8 @@ const Movie = (props) => {
 	useEffect(() => {
 		axios
 			.get(
-				'https://api.themoviedb.org/3/movie/550?',
-				process.env.REACT_APP_FOODFLIX_API_KEY
+				'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key='+
+				process.env.REACT_APP_FOODFLIX_API_KEY+'&page=1'
 			)
 			.then((res) => {
 				setMovie(res.data.results);
